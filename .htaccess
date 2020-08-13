@@ -1,0 +1,9 @@
+# Rewriting urls to exclude extensions
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.pdf -f
+RewriteRule ^(.*)$ $1.pdf [NC,L]
