@@ -2,9 +2,12 @@
     <meta charset="UTF-8">
     <title> Wolf Van Dierdonck </title>
     <link rel="icon" href="favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;600;800&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Varta:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         html {
         position:relative;
@@ -22,19 +25,38 @@
         }
 
         #banner {
+            background-color: #0A192F;
             width: 100%;
-            height: 70;
-            position: fixed;
+            height: 100;
             top:0;
-            margin-bottom:0;
+            margin-bottom:150;
             z-index:999;
+        }
+
+        ul#links li {
+            display: inline;
+        }
+
+        #welcome {
+            margin-left: 25%;
+        }
+
+
+        .smallSerifGreen {
+            color: aquamarine;
+            font-size: 15;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 400;
         }
 
         p {
             color: #8892B0;
+            font-family: 'Varta', sans-serif;
+            font-size: 20;
         }
 
         a:link {
+            color: #8892B0;
             text-decoration: none;
         }
         
@@ -54,17 +76,39 @@
     </style>
 </head>
 <body>
+    
     <div id="banner">
-        <p style="position: absolute; font-size: 20; font-family: 'Sora', sans-serif; font-weight: 400; margin-top:0; top: 30; right: 30;">
-            <a href="#about" style="margin-right: 20;">1. About</a> 
-            <a href="#resume" style="margin-right: 20;">2. Projects</a> 
-            <a href="#projects" style="margin-right: 20;">3. Contact</a> 
-            <a href="/resume.pdf" style="margin-right: 20;">4. Resume</a>
-        </p>
+        <ul id ="links" style="position: absolute; font-size: 15; font-family: 'Bitter', serif; font-weight: 600; top: 15; right: 50;">
+            <div data-aos="fade-down" data-aos-delay="100" style="display: inline-block;">
+                <li><a href="#about" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">00.</span> About</a></li>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="200" style="display: inline-block;">
+                <li><a href="#resume" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">01.</span> Projects</a></li>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="300" style="display: inline-block;">
+                <li><a href="#projects" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">10.</span> Contact</a></li>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="400" style="display: inline-block;">
+                <li><a href="/resume.pdf" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">11.</span> Resume</a></li>
+            </div>
+        </ul>
 
     </div>
 
+    <div id="welcome" data-aos="fade-right" data-aos-delay="600" data-aos-duration="2000">
+        <p class="smallSerifGreen">Hi, I'm</p>
+        <p style="font-size:80; font-family: 'Alata', sans-serif; font-weight: 800; color:white; margin-top: 15; margin-bottom:35">Wolf Van Dierdonck</p>
+        <p style="margin-right:50%;">
+            A university student interested in all things programming. <br>
+            Currently pursuing <span style="color: aquamarine;"><b>Software Engineering</b></span> at the <span style="color: aquamarine;"><b>University of Waterloo</b></span>
+        </p>
+    </div>
+
+    <div style="height: 2000;"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        
+        AOS.init({duration: 1000});
     </script>
+    
 </body></html>
