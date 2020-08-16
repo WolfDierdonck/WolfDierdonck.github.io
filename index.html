@@ -17,7 +17,6 @@
 
         body {
             background-color: #0A192F;
-            overflow-x: hidden;
             max-width: 100%;
             
             padding:0;
@@ -37,7 +36,27 @@
             display: inline;
         }
 
-        #welcome {
+
+        .button {
+            border-radius: 5px;
+            border: 2px solid aquamarine;
+            background-color: transparent;
+            padding: 15px 20px;
+            font-size: 15;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 400;
+            transition: 1s;
+            transition-timing-function: cubic-bezier(.5, .05, .55, 1);
+            color: aquamarine !important;
+        }
+
+        .button:hover {
+            background-color: #172943;
+            transition: 1s;
+            transition-timing-function: cubic-bezier(.1, .05, .2, 1);
+        }
+
+        .textSection {
             margin-left: 25%;
         }
 
@@ -49,10 +68,24 @@
             font-weight: 400;
         }
 
+        .header{
+            color: white;
+            font-size: 30;
+            font-family: 'Alata', sans-serif; 
+            font-weight: 800;
+        }
+
         p {
             color: #8892B0;
             font-family: 'Varta', sans-serif;
             font-size: 20;
+        }
+
+        hr {
+            display: inline-block;
+            color:#8892B0;
+            transform: translateY(5px);
+            margin-left: 10;
         }
 
         a:link {
@@ -76,39 +109,53 @@
     </style>
 </head>
 <body>
-    
+
     <div id="banner">
         <ul id ="links" style="position: absolute; font-size: 15; font-family: 'Bitter', serif; font-weight: 600; top: 15; right: 50;">
-            <div data-aos="fade-down" data-aos-delay="100" style="display: inline-block;">
-                <li><a href="#about" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">00.</span> About</a></li>
-            </div>
             <div data-aos="fade-down" data-aos-delay="200" style="display: inline-block;">
-                <li><a href="#resume" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">01.</span> Projects</a></li>
+                <li><a href="#about" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">01.</span> About</a></li>
             </div>
             <div data-aos="fade-down" data-aos-delay="300" style="display: inline-block;">
-                <li><a href="#projects" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">10.</span> Contact</a></li>
+               <li><a href="#projects" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">10.</span> Projects</a></li>
             </div>
             <div data-aos="fade-down" data-aos-delay="400" style="display: inline-block;">
-                <li><a href="/resume.pdf" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">11.</span> Resume</a></li>
+                <li><a href="#resume" style="margin-right: 20;"><span style="color: aquamarine; margin-right: 7;">11.</span> Resume</a></li>
             </div>
         </ul>
-
     </div>
 
-    <div id="welcome" data-aos="fade-right" data-aos-delay="600" data-aos-duration="2000">
+    <div class="textSection" data-aos="fade-right" data-aos-delay="750" data-aos-duration="2000">
         <p class="smallSerifGreen">Hi, I'm</p>
         <p style="font-size:80; font-family: 'Alata', sans-serif; font-weight: 800; color:white; margin-top: 15; margin-bottom:35">Wolf Van Dierdonck</p>
-        <p style="margin-right:50%;">
+        <p style="margin-right:45%; margin-bottom:50px;">
             A university student interested in all things programming. <br>
             Currently pursuing <span style="color: aquamarine;"><b>Software Engineering</b></span> at the <span style="color: aquamarine;"><b>University of Waterloo</b></span>
         </p>
+
+        <a class="button" href="mailto:wolf.vandierdonck@gmail.com" id ="contactButton"> 
+            Contact Me!
+        </a>
     </div>
 
-    <div style="height: 2000;"></div>
+    <div id="aboutOffset"></div>
+
+    <div class="textSection" data-aos="fade-right" data-aos-offset="50">
+        <div class="header">
+            About Me
+            <hr style="width: 500">
+        </div>
+    </div>
+
+    <div style="height: 500;"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({duration: 1000});
+
+        var contactButton = document.getElementById("contactButton");
+        var aboutOffset = document.getElementById("aboutOffset");
+
+        aboutOffset.style.height = window.innerHeight-contactButton.getBoundingClientRect().bottom;
     </script>
     
 </body></html>
