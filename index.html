@@ -87,6 +87,8 @@
             font-family: 'Alata', sans-serif; 
             font-weight: 800;
             margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         p {
@@ -100,6 +102,7 @@
             color:#8892B0;
             transform: translateY(5px);
             margin-left: 10;
+            width: 100%;
         }
 
         a:link {
@@ -154,13 +157,13 @@
     <div id="aboutOffset"></div>
     <div id="about" style="height:1; margin-bottom: 50px"></div>
 
-    <div class="textSection" data-aos="fade-right" data-aos-offset="50">
-        <div class="header">
+    <div class="textSection">
+        <div class="header" data-aos="fade-right" data-aos-offset="50">
             About Me
-            <hr style="width: 80%">
+            <hr>
         </div>
 
-        <div style="display: inline-block; width: 45%; margin-right: 15%;">
+        <div style="display: inline-block; width: 45%; margin-right: 15%;" data-aos="fade-right" data-aos-delay="300">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit eget gravida cum sociis. Eget nullam non nisi est sit. Non sodales neque sodales ut etiam. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
                 <br><br>Here are some of the <span style="color: aquamarine;"><b>frameworks</b></span> and <span style="color: aquamarine;"><b>languages</b></span> I have used:
             </p>
@@ -175,12 +178,32 @@
             </ul>
         </div>
 
-        <div style="border: 3px solid aquamarine; border-radius: 2px; display: inline-block; width: 30%; vertical-align: top; margin-top: 60px;">
+        <div data-aos="fade-left"data-aos-delay="600" style="border: 3px solid aquamarine; border-radius: 2px; display: inline-block; width: 30%; vertical-align: top; margin-top: 60px;">
             <img src="photo.png" style="transform: translate(-10px, -10px); width: 100%; height: auto;">
         </div>   
     </div>
 
-    <div style="height: 800;"></div>
+    <div style="height: 350;"></div>
+    <div id="projects" style="height:1; margin-bottom: 50px"></div>
+
+    <div class="textSection">
+        <div class="header" data-aos="fade-right" data-aos-offset="50">
+            Projects
+            <hr>
+        </div>
+    </div>
+
+    <div style="height: 350;"></div>
+    <div id="resume" style="height:1; margin-bottom: 50px"></div>
+
+    <div class="textSection">
+        <div class="header" data-aos="fade-right" data-aos-offset="50">
+            Resume
+            <hr>
+        </div>
+    </div>
+
+    <div style="height: 1000;"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
