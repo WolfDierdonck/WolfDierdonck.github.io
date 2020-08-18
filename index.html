@@ -91,6 +91,70 @@
             overflow: hidden;
         }
 
+        .projectBlock {
+            border: 3px solid aquamarine; 
+            border-radius: 2px; 
+            display: inline-block;
+            background: #0d1f3b;
+            width: 31%;
+            padding: 20;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            margin-right: 3%;
+        }
+
+        .projectHeader {
+            display: -moz-box;
+            -moz-box-orient: center;
+            -moz-box-align: center;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+
+        .projectHeaderText {
+            color: #DFDFDF;
+            font-size: 25;
+            font-weight: 800;
+        }
+
+        .flexSeperator {
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+        }
+
+        .externalLinkProject {
+            transform: translateY(-3px);
+            width: 10%;
+            height: auto;
+            float: right;
+        }
+
+        .externalLinkProject:hover {
+            cursor: pointer;
+        }
+
+        .externalLinkText {
+            position: absolute;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 4px;
+            background: black;
+            color: white;
+            display: none;
+            font-family: 'Varta', sans-serif;
+            font-size: 15;
+            z-index: 999;
+            transform: translate(10px, -15px);
+        } 
+
+        .externalLinkProject:hover + .externalLinkText {
+            display: block;
+        }
+
         p {
             color: #8892B0;
             font-family: 'Varta', sans-serif;
@@ -154,7 +218,7 @@
         </a>
     </div>
 
-    <div id="aboutOffset"></div>
+    <div id="aboutOffset" style="height: 600"></div>
     <div id="about" style="height:1; margin-bottom: 50px"></div>
 
     <div class="textSection">
@@ -163,7 +227,7 @@
             <hr>
         </div>
 
-        <div style="display: inline-block; width: 45%; margin-right: 15%;" data-aos="fade-right" data-aos-delay="300">
+        <div style="display: inline-block; width: 45%; margin-right: 15%;" data-aos="fade-right">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit eget gravida cum sociis. Eget nullam non nisi est sit. Non sodales neque sodales ut etiam. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
                 <br><br>Here are some of the <span style="color: aquamarine;"><b>frameworks</b></span> and <span style="color: aquamarine;"><b>languages</b></span> I have used:
             </p>
@@ -175,10 +239,11 @@
                 <li>Javascript</li>
                 <li>Xamarin</li>
                 <li>AR Core</li>
+                <li>TensorFlow</li>
             </ul>
         </div>
 
-        <div data-aos="fade-left"data-aos-delay="600" style="border: 3px solid aquamarine; border-radius: 2px; display: inline-block; width: 30%; vertical-align: top; margin-top: 60px;">
+        <div data-aos="fade-left"data-aos-delay="300" style="border: 3px solid aquamarine; border-radius: 2px; display: inline-block; width: 30%; vertical-align: top; margin-top: 60px;">
             <img src="photo.png" style="transform: translate(-10px, -10px); width: 100%; height: auto;">
         </div>   
     </div>
@@ -191,6 +256,43 @@
             Projects
             <hr>
         </div>
+
+        <div style="white-space: nowrap;">
+            <div data-aos="fade-right" id="arProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
+                <a href="https://github.com/WolfDierdonck/AR-Grapher" target="_blank">
+                    <div class="projectHeader">
+                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">AR Grapher</p>
+                        <div class="flexSeperator box"></div>
+                        <img class="externalLinkProject box" src="externalSite.png"></img>
+                        <div class="externalLinkText">Visit Github Page</div>
+                    </div>
+                </a>
+                <p style="margin-bottom: 0; margin-top: 10">An Android app that can create a 3D graph from a mathematical equation and display it in Augmented Reality.</p>
+            </div>
+            <div data-aos="fade" id="rvccProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
+                <a href="https://github.com/WolfDierdonck/RVCC" target="_blank">
+                    <div class="projectHeader">
+                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">RVCC</p>
+                        <div class="flexSeperator box"></div>
+                        <img class="externalLinkProject box" src="externalSite.png"></img>
+                        <div class="externalLinkText">Visit Github Page</div>
+                    </div>
+                </a>
+                <p style="margin-bottom: 0; margin-top: 10">A modified toy car that can be controlled using voice commands spoken into a mobile device.</p>
+            </div>
+
+            <div data-aos="fade-left" id="naProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
+                <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                    <div class="projectHeader">
+                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">N/A</p>
+                        <div class="flexSeperator box"></div>
+                        <img class="externalLinkProject box" src="externalSite.png"></img>
+                        <div class="externalLinkText">Visit Github Page</div>
+                    </div>
+                </a>
+                <p style="margin-bottom: 0; margin-top: 10">I'm still working on this project, when it's finished I'll add it here!</p>
+            </div>
+        </div>
     </div>
 
     <div style="height: 350;"></div>
@@ -201,18 +303,33 @@
             Resume
             <hr>
         </div>
+
+
     </div>
 
     <div style="height: 1000;"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({duration: 1000});
+        try {
+            AOS.init({duration: 1000});
+        }
+        catch {
+            console.log("AOS not found, check internet connection");
+        }
 
         var contactButton = document.getElementById("contactButton");
         var aboutOffset = document.getElementById("aboutOffset");
 
         aboutOffset.style.height = window.innerHeight-contactButton.getBoundingClientRect().bottom;
+
+        var arProject = document.getElementById("arProject");
+        var rvccProject = document.getElementById("rvccProject");
+        var naProject = document.getElementById("naProject");
+
+        rvccProject.style.height = arProject.offsetHeight;
+        naProject.style.height = arProject.offsetHeight;
+
     </script>
     
 </body></html>
