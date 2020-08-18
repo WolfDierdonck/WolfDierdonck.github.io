@@ -1,193 +1,14 @@
+
 <html><head>
     <meta charset="UTF-8">
     <title> Wolf Van Dierdonck </title>
     <link rel="icon" href="favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;600;800&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Varta:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-        html {
-        position:relative;
-        scroll-behavior: smooth;
-        min-height: 100%;
-        }
-
-        body {
-            background-color: #0A192F;
-            max-width: 100%;
-            
-            padding:0;
-            margin:0;
-        }
-
-        #banner {
-            background-color: #0A192F;
-            width: 100%;
-            height: 100;
-            top:0;
-            margin-bottom:150;
-            z-index:999;
-        }
-
-        ul#links li {
-            display: inline;
-        }
-
-        ul#frameworks li {
-            padding-left: 16px;
-            color: #8892B0;
-            font-family: 'Varta', sans-serif;
-            font-size: 15;
-        }
-
-        ul#frameworks li::before {
-            content: "↦";
-            padding-right: 8px;
-            color: aquamarine;
-        }
-
-        .button {
-            border-radius: 5px;
-            border: 2px solid aquamarine;
-            background-color: transparent;
-            padding: 15px 20px;
-            font-size: 15;
-            font-family: 'Inconsolata', monospace;
-            font-weight: 400;
-            transition: 1s;
-            transition-timing-function: cubic-bezier(.5, .05, .55, 1);
-            color: aquamarine !important;
-        }
-
-        .button:hover {
-            background-color: #172943;
-            transition: 1s;
-            transition-timing-function: cubic-bezier(.1, .05, .2, 1);
-        }
-
-        .textSection {
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-
-
-        .smallSerifGreen {
-            color: aquamarine;
-            font-size: 15;
-            font-family: 'Inconsolata', monospace;
-            font-weight: 400;
-        }
-
-        .header{
-            color: white;
-            font-size: 30;
-            font-family: 'Alata', sans-serif; 
-            font-weight: 800;
-            margin-bottom: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .projectBlock {
-            border: 3px solid aquamarine; 
-            border-radius: 2px; 
-            display: inline-block;
-            background: #0d1f3b;
-            width: 31%;
-            padding: 20;
-            box-sizing: border-box;
-            word-wrap: break-word;
-            margin-right: 3%;
-        }
-
-        .projectHeader {
-            display: -moz-box;
-            -moz-box-orient: center;
-            -moz-box-align: center;
-            display: -webkit-box;
-            -webkit-box-orient: horizontal;
-            -webkit-box-pack: center;
-            -webkit-box-align: center;
-        }
-
-        .projectHeaderText {
-            color: #DFDFDF;
-            font-size: 25;
-            font-weight: 800;
-        }
-
-        .flexSeperator {
-            -moz-box-flex: 1;
-            -webkit-box-flex: 1;
-        }
-
-        .externalLinkProject {
-            transform: translateY(-3px);
-            width: 10%;
-            height: auto;
-            float: right;
-        }
-
-        .externalLinkProject:hover {
-            cursor: pointer;
-        }
-
-        .externalLinkText {
-            position: absolute;
-            padding-top: 3px;
-            padding-bottom: 3px;
-            padding-left: 5px;
-            padding-right: 5px;
-            border-radius: 4px;
-            background: black;
-            color: white;
-            display: none;
-            font-family: 'Varta', sans-serif;
-            font-size: 15;
-            z-index: 999;
-            transform: translate(10px, -15px);
-        } 
-
-        .externalLinkProject:hover + .externalLinkText {
-            display: block;
-        }
-
-        p {
-            color: #8892B0;
-            font-family: 'Varta', sans-serif;
-            font-size: 20;
-        }
-
-        hr {
-            display: inline-block;
-            color:#8892B0;
-            transform: translateY(5px);
-            margin-left: 10;
-            width: 100%;
-        }
-
-        a:link {
-            color: #8892B0;
-            text-decoration: none;
-        }
-        
-        a:visited {
-            color: #8892B0;
-        }
-
-        a:hover, a:focus {
-            color: aquamarine;
-            transition: 0.2s;
-        }
-
-        a:active {
-            color:aquamarine;
-        }
-
-    </style>
 </head>
 <body>
 
@@ -205,7 +26,7 @@
         </ul>
     </div>
 
-    <div class="textSection" data-aos="fade-right" data-aos-delay="750" data-aos-duration="2000">
+    <div id ="splashScreen" class="textSection" data-aos="fade-right" data-aos-delay="750" data-aos-duration="2000">
         <p class="smallSerifGreen">Hi, I'm</p>
         <p style="font-size:80; font-family: 'Alata', sans-serif; font-weight: 800; color:white; margin-top: 15; margin-bottom:35">Wolf Van Dierdonck</p>
         <p style="margin-bottom:50px;">
@@ -218,10 +39,10 @@
         </a>
     </div>
 
-    <div id="aboutOffset" style="height: 600"></div>
+    <div id="aboutOffset" style="height: 600; min-height: 200;"></div>
     <div id="about" style="height:1; margin-bottom: 50px"></div>
 
-    <div class="textSection">
+    <div id="aboutSection" class="textSection">
         <div class="header" data-aos="fade-right" data-aos-offset="50">
             About Me
             <hr>
@@ -251,40 +72,42 @@
     <div style="height: 350;"></div>
     <div id="projects" style="height:1; margin-bottom: 50px"></div>
 
-    <div class="textSection">
+    <div id="projectsSection" class="textSection">
         <div class="header" data-aos="fade-right" data-aos-offset="50">
             Projects
             <hr>
         </div>
 
-        <div style="white-space: nowrap;">
+        <div style="white-space: nowrap; display: flex; margin-bottom: 20px">
             <div data-aos="fade-right" id="arProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
                 <a href="https://github.com/WolfDierdonck/AR-Grapher" target="_blank">
                     <div class="projectHeader">
-                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">AR Grapher</p>
+                        <p style="margin-top: 10; margin-bottom: 10;" class="projectHeaderText box">AR Grapher</p>
                         <div class="flexSeperator box"></div>
                         <img class="externalLinkProject box" src="externalSite.png"></img>
                         <div class="externalLinkText">Visit Github Page</div>
                     </div>
                 </a>
-                <p style="margin-bottom: 0; margin-top: 10">An Android app that can create a 3D graph from a mathematical equation and display it in Augmented Reality.</p>
+                <p style="margin-bottom: 10; margin-top: 10">An Android app that can create a 3D graph from a mathematical equation and display it in Augmented Reality.</p>
+                <p class="smallSerifGreen">C#&emsp;AR Core&emsp;Unity</p>
             </div>
             <div data-aos="fade" id="rvccProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
                 <a href="https://github.com/WolfDierdonck/RVCC" target="_blank">
                     <div class="projectHeader">
-                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">RVCC</p>
+                        <p style="margin-top: 10; margin-bottom: 10;" class="projectHeaderText box">RVCC</p>
                         <div class="flexSeperator box"></div>
                         <img class="externalLinkProject box" src="externalSite.png"></img>
                         <div class="externalLinkText">Visit Github Page</div>
                     </div>
                 </a>
-                <p style="margin-bottom: 0; margin-top: 10">A modified toy car that can be controlled using voice commands spoken into a mobile device.</p>
+                <p style="margin-bottom: 10; margin-top: 10">A modified toy car that can be controlled using voice commands spoken into a mobile device.</p>
+                <p class="smallSerifGreen">C++&emsp;C#&emsp;Xamarin&emsp;Bluetooth&emsp;Speech Recognition</p>
             </div>
 
             <div data-aos="fade-left" id="naProject" class="projectBlock" style="white-space: normal; vertical-align: top;">
                 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
                     <div class="projectHeader">
-                        <p style="margin-top: 0; margin-bottom: 0;" class="projectHeaderText box">N/A</p>
+                        <p style="margin-top: 10; margin-bottom: 10;" class="projectHeaderText box">N/A</p>
                         <div class="flexSeperator box"></div>
                         <img class="externalLinkProject box" src="externalSite.png"></img>
                         <div class="externalLinkText">Visit Github Page</div>
@@ -293,43 +116,36 @@
                 <p style="margin-bottom: 0; margin-top: 10">I'm still working on this project, when it's finished I'll add it here!</p>
             </div>
         </div>
+
+        <div id="arPopup">
+
+        </div>
+
+        <div id="rvccPopup">
+            
+        </div>
     </div>
 
     <div style="height: 350;"></div>
     <div id="resume" style="height:1; margin-bottom: 50px"></div>
 
-    <div class="textSection">
+    <div id="resumeSection" class="textSection">
         <div class="header" data-aos="fade-right" data-aos-offset="50">
             Resume
             <hr>
         </div>
 
+        <p data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nascetur ridiculus mus mauris vitae. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Urna et pharetra pharetra massa massa ultricies mi. Sed tempus urna et pharetra. Donec pretium vulputate sapien nec. Varius duis at consectetur lorem donec massa sapien. Aliquam etiam erat velit scelerisque in dictum non. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Ac felis donec et odio pellentesque. Quam viverra orci sagittis eu volutpat odio facilisis. Semper eget duis at tellus.
+
+            Egestas integer eget aliquet nibh praesent. Purus in massa tempor nec feugiat nisl pretium. Duis ultricies lacus sed turpis. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Eleifend donec pretium vulputate sapien nec sagittis. Sagittis purus sit amet volutpat. Tempor commodo ullamcorper a lacus vestibulum. Quam elementum pulvinar etiam non quam lacus suspendisse. Elementum curabitur vitae nunc sed velit. Ac placerat vestibulum lectus mauris ultrices eros in. Pellentesque habitant morbi tristique senectus et netus et malesuada. Risus nullam eget felis eget nunc lobortis mattis aliquam.</p>
 
     </div>
 
-    <div style="height: 1000;"></div>
+    <div style="height: 200"></div>
+    <div style="height: 300; background-image: linear-gradient(#0A192F, #02060c)"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        try {
-            AOS.init({duration: 1000});
-        }
-        catch {
-            console.log("AOS not found, check internet connection");
-        }
-
-        var contactButton = document.getElementById("contactButton");
-        var aboutOffset = document.getElementById("aboutOffset");
-
-        aboutOffset.style.height = window.innerHeight-contactButton.getBoundingClientRect().bottom;
-
-        var arProject = document.getElementById("arProject");
-        var rvccProject = document.getElementById("rvccProject");
-        var naProject = document.getElementById("naProject");
-
-        rvccProject.style.height = arProject.offsetHeight;
-        naProject.style.height = arProject.offsetHeight;
-
-    </script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="index.js"></script>
     
 </body></html>
