@@ -81,6 +81,15 @@ html {
         overflow: hidden;
     }
 
+    .projectBlock {
+        background-color: #172943;
+        border: 2px solid aquamarine; 
+        border-radius: 3px; 
+        display: inline-block; 
+        width: 100%; 
+        vertical-align: top; 
+    }
+
     p {
         color: #8892B0;
         font-family: 'Varta', sans-serif;
